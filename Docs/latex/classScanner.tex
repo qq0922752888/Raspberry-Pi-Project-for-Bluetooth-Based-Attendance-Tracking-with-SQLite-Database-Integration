@@ -1,0 +1,146 @@
+\hypertarget{classScanner}{}\doxysection{Scanner Class Reference}
+\label{classScanner}\index{Scanner@{Scanner}}
+
+
+Collaboration diagram for Scanner\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScanner_a39f85e20f3ca942fd0a8e4bce88c27c7}{$\sim$\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em Destructor to delete both \mbox{\hyperlink{classScanner}{Scanner}} and \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} as they are no longer needed anymore when we\textquotesingle{}re done with \mbox{\hyperlink{classScanner}{Scanner}}. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classScanner_a0505fea4b56a554b045ec22b8e8dab27}{scan}} ()
+\begin{DoxyCompactList}\small\item\em Scan returns the bluetooth M\+AC addresses of the devices that we found. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classScanner}{Scanner}} $\ast$ \mbox{\hyperlink{classScanner_a160ed2a423a311d3571930e78907cef8}{get\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em If the \mbox{\hyperlink{classScanner}{Scanner}} object is not initialized, initialize it and then return the pointer to the \mbox{\hyperlink{classScanner}{Scanner}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classScanner_acc995a4b67a10d2652ce00afed14f497}{Scanner}} ()
+\begin{DoxyCompactList}\small\item\em Constructor to initialize our \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} pointer to point to the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} singleton object when creating a \mbox{\hyperlink{classScanner}{Scanner}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classScanner_a87e0739eef10921890862d1906da319b}\label{classScanner_a87e0739eef10921890862d1906da319b}} 
+\mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} $\ast$ {\bfseries bluetooth\+Scanner}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classScanner}{Scanner}} $\ast$ \mbox{\hyperlink{classScanner_a1c2967a92fc6fb3de04abdda8bd9a491}{scanner}} = 0
+\begin{DoxyCompactList}\small\item\em A \mbox{\hyperlink{classScanner}{Scanner}} class that parses the data retrieved from \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classScanner_acc995a4b67a10d2652ce00afed14f497}\label{classScanner_acc995a4b67a10d2652ce00afed14f497}} 
+\index{Scanner@{Scanner}!Scanner@{Scanner}}
+\index{Scanner@{Scanner}!Scanner@{Scanner}}
+\doxysubsubsection{\texorpdfstring{Scanner()}{Scanner()}}
+{\footnotesize\ttfamily Scanner\+::\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Constructor to initialize our \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} pointer to point to the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} singleton object when creating a \mbox{\hyperlink{classScanner}{Scanner}} object. 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScanner_a39f85e20f3ca942fd0a8e4bce88c27c7}\label{classScanner_a39f85e20f3ca942fd0a8e4bce88c27c7}} 
+\index{Scanner@{Scanner}!````~Scanner@{$\sim$Scanner}}
+\index{````~Scanner@{$\sim$Scanner}!Scanner@{Scanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$Scanner()}{~Scanner()}}
+{\footnotesize\ttfamily Scanner\+::$\sim$\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor to delete both \mbox{\hyperlink{classScanner}{Scanner}} and \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} as they are no longer needed anymore when we\textquotesingle{}re done with \mbox{\hyperlink{classScanner}{Scanner}}. 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classScanner_a160ed2a423a311d3571930e78907cef8}\label{classScanner_a160ed2a423a311d3571930e78907cef8}} 
+\index{Scanner@{Scanner}!getScanner@{getScanner}}
+\index{getScanner@{getScanner}!Scanner@{Scanner}}
+\doxysubsubsection{\texorpdfstring{getScanner()}{getScanner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScanner}{Scanner}} $\ast$ Scanner\+::get\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+If the \mbox{\hyperlink{classScanner}{Scanner}} object is not initialized, initialize it and then return the pointer to the \mbox{\hyperlink{classScanner}{Scanner}} object. 
+
+\begin{DoxyReturn}{Returns}
+scanner -\/ The current instance of the \mbox{\hyperlink{classScanner}{Scanner}} class 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classScanner_a0505fea4b56a554b045ec22b8e8dab27}\label{classScanner_a0505fea4b56a554b045ec22b8e8dab27}} 
+\index{Scanner@{Scanner}!scan@{scan}}
+\index{scan@{scan}!Scanner@{Scanner}}
+\doxysubsubsection{\texorpdfstring{scan()}{scan()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Scanner\+::scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Scan returns the bluetooth M\+AC addresses of the devices that we found. 
+
+\begin{DoxyReturn}{Returns}
+devices -\/ the M\+AC addresses of the scanned bluetooth devices 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classScanner_a1c2967a92fc6fb3de04abdda8bd9a491}\label{classScanner_a1c2967a92fc6fb3de04abdda8bd9a491}} 
+\index{Scanner@{Scanner}!scanner@{scanner}}
+\index{scanner@{scanner}!Scanner@{Scanner}}
+\doxysubsubsection{\texorpdfstring{scanner}{scanner}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classScanner}{Scanner}} $\ast$ Scanner\+::scanner = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+A \mbox{\hyperlink{classScanner}{Scanner}} class that parses the data retrieved from \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}}. 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Scanner.\+h\item 
+Scanner.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,126 @@
+\hypertarget{classLogin}{}\doxysection{Login Class Reference}
+\label{classLogin}\index{Login@{Login}}
+
+
+Collaboration diagram for Login\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogin_a659bc7233ec12c79b9fa523c1734fbbc}{$\sim$\+Login}} ()
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classLogin_ae21d265d80e6c00aa099976da002b725}{Authenticate\+User}} (std\+::string username, std\+::string password)
+\begin{DoxyCompactList}\small\item\em checks if username and password match any credentials in the professor database \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classLogin}{Login}} $\ast$ \mbox{\hyperlink{classLogin_a3ab9811a4faec76eefc7b94dd67c6249}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Checks if an instance exists and returns it, otherwise it will create an instance and return it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLogin_a4847f3e07e43b540d3339392346f87ff}{Login}} ()
+\begin{DoxyCompactList}\small\item\em private contstructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classLogin_a4c6fa061ccb0fd0d581df5f2c0a10ad7}\label{classLogin_a4c6fa061ccb0fd0d581df5f2c0a10ad7}} 
+static \mbox{\hyperlink{classLogin}{Login}} $\ast$ {\bfseries login\+Pointer} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLogin_a4847f3e07e43b540d3339392346f87ff}\label{classLogin_a4847f3e07e43b540d3339392346f87ff}} 
+\index{Login@{Login}!Login@{Login}}
+\index{Login@{Login}!Login@{Login}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily Login\+::\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+private contstructor 
+
+\begin{DoxyAuthor}{Author}
+Uzair Salim 251 143 778 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLogin_a659bc7233ec12c79b9fa523c1734fbbc}\label{classLogin_a659bc7233ec12c79b9fa523c1734fbbc}} 
+\index{Login@{Login}!````~Login@{$\sim$Login}}
+\index{````~Login@{$\sim$Login}!Login@{Login}}
+\doxysubsubsection{\texorpdfstring{$\sim$Login()}{~Login()}}
+{\footnotesize\ttfamily Login\+::$\sim$\+Login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor 
+
+\begin{DoxyAuthor}{Author}
+Uzair Salim 251 143 778 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLogin_ae21d265d80e6c00aa099976da002b725}\label{classLogin_ae21d265d80e6c00aa099976da002b725}} 
+\index{Login@{Login}!AuthenticateUser@{AuthenticateUser}}
+\index{AuthenticateUser@{AuthenticateUser}!Login@{Login}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUser()}{AuthenticateUser()}}
+{\footnotesize\ttfamily bool Login\+::\+Authenticate\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+checks if username and password match any credentials in the professor database 
+
+\begin{DoxyReturn}{Returns}
+true if username and password match credentials in the professor table, false elsewise 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Uzair Salim 251 143 778 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLogin_a3ab9811a4faec76eefc7b94dd67c6249}\label{classLogin_a3ab9811a4faec76eefc7b94dd67c6249}} 
+\index{Login@{Login}!instance@{instance}}
+\index{instance@{instance}!Login@{Login}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLogin}{Login}} $\ast$ Login\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if an instance exists and returns it, otherwise it will create an instance and return it. 
+
+Function name \+: instance ~\newline
+ \begin{DoxyReturn}{Returns}
+login\+Pointer -\/ instance of the class if it has not yet been created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Uzair Salim 251 143 778 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Login.\+h\item 
+Login.\+cpp\end{DoxyCompactItemize}

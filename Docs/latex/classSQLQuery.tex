@@ -1,0 +1,199 @@
+\hypertarget{classSQLQuery}{}\doxysection{S\+Q\+L\+Query Class Reference}
+\label{classSQLQuery}\index{SQLQuery@{SQLQuery}}
+
+
+Collaboration diagram for S\+Q\+L\+Query\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSQLQuery_a1c0ba650b4309948e9d8ca78156e8a46}{$\sim$\+S\+Q\+L\+Query}} ()
+\begin{DoxyCompactList}\small\item\em Deconstructor for the class, which closes the connection between the sqlite3 server and this class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSQLQuery_a6d69efcbee4da1d7b0eb809983e7ec99}{Exec}} (std\+::string sql\+Command)
+\begin{DoxyCompactList}\small\item\em This class passes sql queries to the sqlite3 server that are related to writing to tables, insertting to tables, updating tables, or deleting table entries. @parameter sql\+Command -\/ a string variable that represents a sql query. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classSQLQuery_a5ecc25eb976781265dcfb882b8b9f5fd}{Read\+Many}} (std\+::string sql\+Command)
+\begin{DoxyCompactList}\small\item\em this class passes sql queries to the sqlite3 server that are related to selecting two or more entries from a table \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classSQLQuery_aefceaafbfaca881aaadb85db62537508}{Read\+One}} (std\+::string sql\+Command)
+\begin{DoxyCompactList}\small\item\em This function passes sql queries to the sqlite3 server that are related to selecting one entry from a table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSQLQuery_aa63ca53f0076ca1718e30afbc715d13c}{create\+Table}} (std\+::string sql\+Command)
+\begin{DoxyCompactList}\small\item\em This class passes sql queries to the sqlite3 server that are related to creating a table. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classSQLQuery}{S\+Q\+L\+Query}} $\ast$ \mbox{\hyperlink{classSQLQuery_afce730da663d03a458b2ea46c4d9561c}{instance}} ()
+\begin{DoxyCompactList}\small\item\em this function initlizes the classes pointer to itself if unitilized; Otherwise, it returns it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSQLQuery_a75c5b88df4bbdad8c930628ea0d44b0e}{S\+Q\+L\+Query}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the class, which initlizes the name of the database (always \char`\"{}data.\+db\char`\"{}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSQLQuery_a8b42e1fc42a01b2145a9ee3c2bd45421}\label{classSQLQuery_a8b42e1fc42a01b2145a9ee3c2bd45421}} 
+sqlite3 $\ast$ {\bfseries Database}
+\item 
+\mbox{\Hypertarget{classSQLQuery_a09c8b51cf9654752c61ee1972cfc41a4}\label{classSQLQuery_a09c8b51cf9654752c61ee1972cfc41a4}} 
+std\+::string {\bfseries Database\+Name}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSQLQuery_aad6b2b3c713f52f5e18cbec8b168e054}\label{classSQLQuery_aad6b2b3c713f52f5e18cbec8b168e054}} 
+static \mbox{\hyperlink{classSQLQuery}{S\+Q\+L\+Query}} $\ast$ {\bfseries Query} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSQLQuery_a75c5b88df4bbdad8c930628ea0d44b0e}\label{classSQLQuery_a75c5b88df4bbdad8c930628ea0d44b0e}} 
+\index{SQLQuery@{SQLQuery}!SQLQuery@{SQLQuery}}
+\index{SQLQuery@{SQLQuery}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{SQLQuery()}{SQLQuery()}}
+{\footnotesize\ttfamily S\+Q\+L\+Query\+::\+S\+Q\+L\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor for the class, which initlizes the name of the database (always \char`\"{}data.\+db\char`\"{}) 
+
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSQLQuery_a1c0ba650b4309948e9d8ca78156e8a46}\label{classSQLQuery_a1c0ba650b4309948e9d8ca78156e8a46}} 
+\index{SQLQuery@{SQLQuery}!````~SQLQuery@{$\sim$SQLQuery}}
+\index{````~SQLQuery@{$\sim$SQLQuery}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{$\sim$SQLQuery()}{~SQLQuery()}}
+{\footnotesize\ttfamily S\+Q\+L\+Query\+::$\sim$\+S\+Q\+L\+Query (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deconstructor for the class, which closes the connection between the sqlite3 server and this class. 
+
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSQLQuery_aa63ca53f0076ca1718e30afbc715d13c}\label{classSQLQuery_aa63ca53f0076ca1718e30afbc715d13c}} 
+\index{SQLQuery@{SQLQuery}!createTable@{createTable}}
+\index{createTable@{createTable}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{createTable()}{createTable()}}
+{\footnotesize\ttfamily void S\+Q\+L\+Query\+::create\+Table (\begin{DoxyParamCaption}\item[{std\+::string}]{sql\+Command }\end{DoxyParamCaption})}
+
+
+
+This class passes sql queries to the sqlite3 server that are related to creating a table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql\+Command} & -\/ a string variable that represents a sql query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSQLQuery_a6d69efcbee4da1d7b0eb809983e7ec99}\label{classSQLQuery_a6d69efcbee4da1d7b0eb809983e7ec99}} 
+\index{SQLQuery@{SQLQuery}!Exec@{Exec}}
+\index{Exec@{Exec}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{Exec()}{Exec()}}
+{\footnotesize\ttfamily void S\+Q\+L\+Query\+::\+Exec (\begin{DoxyParamCaption}\item[{std\+::string}]{sql\+Command }\end{DoxyParamCaption})}
+
+
+
+This class passes sql queries to the sqlite3 server that are related to writing to tables, insertting to tables, updating tables, or deleting table entries. @parameter sql\+Command -\/ a string variable that represents a sql query. 
+
+Function name \+: Exec \begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSQLQuery_afce730da663d03a458b2ea46c4d9561c}\label{classSQLQuery_afce730da663d03a458b2ea46c4d9561c}} 
+\index{SQLQuery@{SQLQuery}!instance@{instance}}
+\index{instance@{instance}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSQLQuery}{S\+Q\+L\+Query}} $\ast$ S\+Q\+L\+Query\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+this function initlizes the classes pointer to itself if unitilized; Otherwise, it returns it. 
+
+Function name \+: instance ~\newline
+ \begin{DoxyReturn}{Returns}
+Query -\/ instance of the class if none has been created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em nothing} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSQLQuery_a5ecc25eb976781265dcfb882b8b9f5fd}\label{classSQLQuery_a5ecc25eb976781265dcfb882b8b9f5fd}} 
+\index{SQLQuery@{SQLQuery}!ReadMany@{ReadMany}}
+\index{ReadMany@{ReadMany}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{ReadMany()}{ReadMany()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ S\+Q\+L\+Query\+::\+Read\+Many (\begin{DoxyParamCaption}\item[{std\+::string}]{sql\+Command }\end{DoxyParamCaption})}
+
+
+
+this class passes sql queries to the sqlite3 server that are related to selecting two or more entries from a table 
+
+Function name \+: Read\+Many 
+\begin{DoxyParams}{Parameters}
+{\em sql\+Command} & -\/ a string variable that represents a sql query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+container -\/ a vector that holds vectors. The vectors held in the vector each induvidually hold multiple strings representing the data in a row that was selected from a table 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classSQLQuery_aefceaafbfaca881aaadb85db62537508}\label{classSQLQuery_aefceaafbfaca881aaadb85db62537508}} 
+\index{SQLQuery@{SQLQuery}!ReadOne@{ReadOne}}
+\index{ReadOne@{ReadOne}!SQLQuery@{SQLQuery}}
+\doxysubsubsection{\texorpdfstring{ReadOne()}{ReadOne()}}
+{\footnotesize\ttfamily vector$<$ string $>$ S\+Q\+L\+Query\+::\+Read\+One (\begin{DoxyParamCaption}\item[{std\+::string}]{sql\+Command }\end{DoxyParamCaption})}
+
+
+
+This function passes sql queries to the sqlite3 server that are related to selecting one entry from a table. 
+
+Function name \+: Readone 
+\begin{DoxyParams}{Parameters}
+{\em sql\+Command} & -\/ a string variable that represents a sql query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+row\+Entry -\/ a vector that holds strings. The each of the strings in the vector represents a part of the data from the row that was selected from the table 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+\+: Henry Chen 251 166 178 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+S\+Q\+L\+Query.\+h\item 
+S\+Q\+L\+Query.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,171 @@
+\hypertarget{classDeviceRegister}{}\doxysection{Device\+Register Class Reference}
+\label{classDeviceRegister}\index{DeviceRegister@{DeviceRegister}}
+
+
+Collaboration diagram for Device\+Register\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceRegister_af9317da388c343b70b4ff57f338c8a92}{$\sim$\+Device\+Register}} ()
+\begin{DoxyCompactList}\small\item\em destructor for \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} class \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeviceRegister_a87be91712ccba58b20e86179ba7890bc}{Store\+Device\+Register}} (std\+::string Device\+ID, std\+::string Student\+ID)
+\begin{DoxyCompactList}\small\item\em Given student\textquotesingle{}s device\+ID and their student ID, write into the database of device table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeviceRegister_aa11fa705e23739c1e94caf316fb0662b}{Modify\+Device}} (std\+::string Student\+ID, std\+::string Device\+ID)
+\begin{DoxyCompactList}\small\item\em Given student\textquotesingle{}s device\+ID and their student ID, update information the existing device in the device table if exists. Otherwise do nothing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDeviceRegister_a03c79c15e47dc39a06ee57a4fcaa2117}{Delete\+Device}} (std\+::string Device\+ID)
+\begin{DoxyCompactList}\small\item\em Given student\textquotesingle{}s device\+ID, delete device in the device table if exists. Otherwise do nothing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} $\ast$ \mbox{\hyperlink{classDeviceRegister_aa683f5f042d8e5d43c0e5e04d3570ace}{instance}} ()
+\begin{DoxyCompactList}\small\item\em Following the singleton design pattern, this class will create only one object in the lifetime of the program. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDeviceRegister_ae8dd5297e052c17851e8a5c7138fb91b}{Device\+Register}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDeviceRegister_ad371654d0738e8117ec377e280dceea7}\label{classDeviceRegister_ad371654d0738e8117ec377e280dceea7}} 
+static \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} $\ast$ {\bfseries Register} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDeviceRegister_ae8dd5297e052c17851e8a5c7138fb91b}\label{classDeviceRegister_ae8dd5297e052c17851e8a5c7138fb91b}} 
+\index{DeviceRegister@{DeviceRegister}!DeviceRegister@{DeviceRegister}}
+\index{DeviceRegister@{DeviceRegister}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{DeviceRegister()}{DeviceRegister()}}
+{\footnotesize\ttfamily Device\+Register\+::\+Device\+Register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Constructor for \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} class. 
+
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying,Tsai 251 262 078 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDeviceRegister_af9317da388c343b70b4ff57f338c8a92}\label{classDeviceRegister_af9317da388c343b70b4ff57f338c8a92}} 
+\index{DeviceRegister@{DeviceRegister}!````~DeviceRegister@{$\sim$DeviceRegister}}
+\index{````~DeviceRegister@{$\sim$DeviceRegister}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{$\sim$DeviceRegister()}{~DeviceRegister()}}
+{\footnotesize\ttfamily Device\+Register\+::$\sim$\+Device\+Register (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor for \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} class 
+
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying,Tsai 251 262 078 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDeviceRegister_a03c79c15e47dc39a06ee57a4fcaa2117}\label{classDeviceRegister_a03c79c15e47dc39a06ee57a4fcaa2117}} 
+\index{DeviceRegister@{DeviceRegister}!DeleteDevice@{DeleteDevice}}
+\index{DeleteDevice@{DeleteDevice}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{DeleteDevice()}{DeleteDevice()}}
+{\footnotesize\ttfamily void Device\+Register\+::\+Delete\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{Device\+ID }\end{DoxyParamCaption})}
+
+
+
+Given student\textquotesingle{}s device\+ID, delete device in the device table if exists. Otherwise do nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+ID} & The Device identification string belonged to a student(s) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying Tsai 251 262 078 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDeviceRegister_aa683f5f042d8e5d43c0e5e04d3570ace}\label{classDeviceRegister_aa683f5f042d8e5d43c0e5e04d3570ace}} 
+\index{DeviceRegister@{DeviceRegister}!instance@{instance}}
+\index{instance@{instance}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDeviceRegister}{Device\+Register}} $\ast$ Device\+Register\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Following the singleton design pattern, this class will create only one object in the lifetime of the program. 
+
+\begin{DoxyReturn}{Returns}
+instance of the class if none has been created 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying,Tsai 251 262 078 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDeviceRegister_aa11fa705e23739c1e94caf316fb0662b}\label{classDeviceRegister_aa11fa705e23739c1e94caf316fb0662b}} 
+\index{DeviceRegister@{DeviceRegister}!ModifyDevice@{ModifyDevice}}
+\index{ModifyDevice@{ModifyDevice}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{ModifyDevice()}{ModifyDevice()}}
+{\footnotesize\ttfamily void Device\+Register\+::\+Modify\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{Student\+ID,  }\item[{std\+::string}]{Device\+ID }\end{DoxyParamCaption})}
+
+
+
+Given student\textquotesingle{}s device\+ID and their student ID, update information the existing device in the device table if exists. Otherwise do nothing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+ID,Student\+ID} & -\/ Device\+ID\+: The Device identification string belonged to a student(s), Student\+ID\+: The Student identification string unique to each student. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying Tsai 251 262 078 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDeviceRegister_a87be91712ccba58b20e86179ba7890bc}\label{classDeviceRegister_a87be91712ccba58b20e86179ba7890bc}} 
+\index{DeviceRegister@{DeviceRegister}!StoreDeviceRegister@{StoreDeviceRegister}}
+\index{StoreDeviceRegister@{StoreDeviceRegister}!DeviceRegister@{DeviceRegister}}
+\doxysubsubsection{\texorpdfstring{StoreDeviceRegister()}{StoreDeviceRegister()}}
+{\footnotesize\ttfamily void Device\+Register\+::\+Store\+Device\+Register (\begin{DoxyParamCaption}\item[{std\+::string}]{Device\+ID,  }\item[{std\+::string}]{Student\+ID }\end{DoxyParamCaption})}
+
+
+
+Given student\textquotesingle{}s device\+ID and their student ID, write into the database of device table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device\+ID,Student\+ID} & -\/ Device\+ID\+: The Device identification string belonged to a student(s), Student\+ID\+: The Student identification string unique to each student. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+\+: Tsung-\/\+Ying Tsai 251 262 078 
+\end{DoxyAuthor}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Device\+Register.\+h\item 
+Device\+Register.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,125 @@
+\hypertarget{classBluetoothScanner}{}\doxysection{Bluetooth\+Scanner Class Reference}
+\label{classBluetoothScanner}\index{BluetoothScanner@{BluetoothScanner}}
+
+
+Collaboration diagram for Bluetooth\+Scanner\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBluetoothScanner_a6fb8f83fe38f5feb85d1ebc301afe57a}{$\sim$\+Bluetooth\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em Destructor to delete the pointer and object to the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} object. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classBluetoothScanner_a8f3c2d4a4f25a40676f9c188b5a4fbb7}{Bluetooth\+Scan}} ()
+\begin{DoxyCompactList}\small\item\em function to run the scan by receiving the output from hcitool and store it in the output string variable \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} $\ast$ \mbox{\hyperlink{classBluetoothScanner_aa36b19ab203c56b2e345f577bb937645}{get\+Bluetooth\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em getter method to create a new \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} object if it does not exist \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBluetoothScanner_addb364d0db29fd76d9b5878bf75f1809}{Bluetooth\+Scanner}} ()
+\begin{DoxyCompactList}\small\item\em constructor for the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} class \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classBluetoothScanner_af10a88bb8d344fb69a4ec456a2afa63d}\label{classBluetoothScanner_af10a88bb8d344fb69a4ec456a2afa63d}} 
+static \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} $\ast$ {\bfseries scanner} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBluetoothScanner_addb364d0db29fd76d9b5878bf75f1809}\label{classBluetoothScanner_addb364d0db29fd76d9b5878bf75f1809}} 
+\index{BluetoothScanner@{BluetoothScanner}!BluetoothScanner@{BluetoothScanner}}
+\index{BluetoothScanner@{BluetoothScanner}!BluetoothScanner@{BluetoothScanner}}
+\doxysubsubsection{\texorpdfstring{BluetoothScanner()}{BluetoothScanner()}}
+{\footnotesize\ttfamily Bluetooth\+Scanner\+::\+Bluetooth\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+constructor for the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} class 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa 251190423 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classBluetoothScanner_a6fb8f83fe38f5feb85d1ebc301afe57a}\label{classBluetoothScanner_a6fb8f83fe38f5feb85d1ebc301afe57a}} 
+\index{BluetoothScanner@{BluetoothScanner}!````~BluetoothScanner@{$\sim$BluetoothScanner}}
+\index{````~BluetoothScanner@{$\sim$BluetoothScanner}!BluetoothScanner@{BluetoothScanner}}
+\doxysubsubsection{\texorpdfstring{$\sim$BluetoothScanner()}{~BluetoothScanner()}}
+{\footnotesize\ttfamily Bluetooth\+Scanner\+::$\sim$\+Bluetooth\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor to delete the pointer and object to the \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} object. 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa 251190423 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBluetoothScanner_a8f3c2d4a4f25a40676f9c188b5a4fbb7}\label{classBluetoothScanner_a8f3c2d4a4f25a40676f9c188b5a4fbb7}} 
+\index{BluetoothScanner@{BluetoothScanner}!BluetoothScan@{BluetoothScan}}
+\index{BluetoothScan@{BluetoothScan}!BluetoothScanner@{BluetoothScanner}}
+\doxysubsubsection{\texorpdfstring{BluetoothScan()}{BluetoothScan()}}
+{\footnotesize\ttfamily string Bluetooth\+Scanner\+::\+Bluetooth\+Scan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+function to run the scan by receiving the output from hcitool and store it in the output string variable 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+output -\/ the string holding the output from hcitool 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Artur Krupa, 251190423 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classBluetoothScanner_aa36b19ab203c56b2e345f577bb937645}\label{classBluetoothScanner_aa36b19ab203c56b2e345f577bb937645}} 
+\index{BluetoothScanner@{BluetoothScanner}!getBluetoothScanner@{getBluetoothScanner}}
+\index{getBluetoothScanner@{getBluetoothScanner}!BluetoothScanner@{BluetoothScanner}}
+\doxysubsubsection{\texorpdfstring{getBluetoothScanner()}{getBluetoothScanner()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} $\ast$ Bluetooth\+Scanner\+::get\+Bluetooth\+Scanner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+getter method to create a new \mbox{\hyperlink{classBluetoothScanner}{Bluetooth\+Scanner}} object if it does not exist 
+
+\begin{DoxyAuthor}{Author}
+Artur Krupa 251190423 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns nothing 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Bluetooth\+Scanner.\+h\item 
+Bluetooth\+Scanner.\+cpp\end{DoxyCompactItemize}

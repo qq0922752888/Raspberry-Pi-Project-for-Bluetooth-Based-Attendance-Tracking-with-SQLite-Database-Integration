@@ -1,0 +1,646 @@
+\hypertarget{classDatabaseManager}{}\doxysection{Database\+Manager Class Reference}
+\label{classDatabaseManager}\index{DatabaseManager@{DatabaseManager}}
+
+
+Collaboration diagram for Database\+Manager\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classDatabaseManager_ad9350afa65bfab0f5c58680cadd3330c}{Read\+All\+Students}} ()
+\begin{DoxyCompactList}\small\item\em selects all data from Attends table which represents student data \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classDatabaseManager_a16e5aa45800543342c54a111512fd040}{Read\+Some\+Students}} (std\+::vector$<$ std\+::string $>$ input, std\+::string Table)
+\begin{DoxyCompactList}\small\item\em selects data from some students given their student ID\textquotesingle{}s in a vector \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classDatabaseManager_a57ca554d136c1e2dc8f79ff7aa41ea79}{Check\+Courses}} (std\+::string username, std\+::string password)
+\begin{DoxyCompactList}\small\item\em checks which courses are okay for a logged in user to access. Also updates and refreshes which courses the professor can access \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classDatabaseManager_af01733f6b17a972225af88ba9af507c6}{Who\+Takes\+What}} ()
+\begin{DoxyCompactList}\small\item\em returns Takes table which represents which student takes what class \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classDatabaseManager_a8430cd77b4ec0c65e4698877d3946481}{Read\+All\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Displays all data from Device table. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \mbox{\hyperlink{classDatabaseManager_acc71bddab14d5a9089f1b364cdd2b2d5}{Read\+Student\+Condition}} (std\+::string input, int mode)
+\begin{DoxyCompactList}\small\item\em selects data from some students given Course\+ID or Time condition \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classDatabaseManager_a0fa9363b8cc6581d32af2a8541cb2e1a}{Get\+Device\+Student}} (std\+::string D\+ID)
+\begin{DoxyCompactList}\small\item\em returns student number from the device table given the device id \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classDatabaseManager_aaeda2a23e5fe08ef4a283de0bf5792c0}{Authenticate\+User}} (std\+::string username, std\+::string password)
+\begin{DoxyCompactList}\small\item\em Will submit a query given username and password, if it returns empty we know both are not correct. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a4e72ffdf8c6e1a5d5ad207157e5d4a19}{Scanner\+No\+Time}} (std\+::string C\+ID)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classScanner}{Scanner}} method without a user input time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a07360be04c8e1ced77c36af9b209712a}{Scanner\+Timed}} (std\+::string C\+ID, time\+\_\+t time\+Till\+Start, time\+\_\+t time\+Till\+Late)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classScanner}{Scanner}} method with a user input time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a8ef3dd1d94edf3d1ba06fda5244f7b58}{Write\+To\+Attendence}} (std\+::string course\+Id, std\+::string student\+Number, std\+::string date, std\+::string presence)
+\begin{DoxyCompactList}\small\item\em writes into the Attends table \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a4e2fa702f462e8a5f1c509915830e85e}{Write\+To\+Device}} (std\+::string ID, std\+::string Device)
+\begin{DoxyCompactList}\small\item\em writes into the Device table which is a table containing all registered devices along with their owners \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a9559015be1223de4d1f0bf99771dcf31}{Write\+To\+Professor}} (std\+::string ID, std\+::string Username, std\+::string Password)
+\begin{DoxyCompactList}\small\item\em writes into the Professor table which functions as the login table \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a0a4c6c0b248993765a73f0a09f46cf56}{Write\+To\+Student}} (std\+::string ID, std\+::string F\+Name, std\+::string L\+Name)
+\begin{DoxyCompactList}\small\item\em writes into the Student table which identifies each student ID with first and last name \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a78cdb75d0086ca3ce764f5e471029680}{Write\+To\+Course}} (std\+::string C\+ID, std\+::string C\+Name, std\+::string P\+ID)
+\begin{DoxyCompactList}\small\item\em writes into the Course table which contains what course, name and who teaches it \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_ad725285de1c00cd66e60ad46e0e869e9}{Write\+To\+Takes}} (std\+::string C\+ID, std\+::string C\+Name)
+\begin{DoxyCompactList}\small\item\em writes into the Takes table which contains the membership of all students and classes they take \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a14d2ef3fdc53221bb866e85f15f9600d}{mark\+Present}} (std\+::string Course\+ID, std\+::string student\+ID, std\+::string date)
+\begin{DoxyCompactList}\small\item\em updates Attends table and sets the student as present \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a28826083bb6fbf66f324113d8c5d76b8}{mark\+Late}} (std\+::string Course\+ID, std\+::string student\+ID, std\+::string date)
+\begin{DoxyCompactList}\small\item\em updates Attends table and sets the student as late \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a0043cceb53dbbcf25b70e3e0a6ec078e}{mark\+Absent}} (std\+::string Course\+ID, std\+::string student\+ID, std\+::string date)
+\begin{DoxyCompactList}\small\item\em updates Attends table and sets the student as absent \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_a624d87be3685e1b5c87c9ccdb0ed5877}{Modify\+Device\+Student\+Num}} (std\+::string S\+ID, std\+::string D\+ID)
+\begin{DoxyCompactList}\small\item\em updates student number in Device table given the device ID \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_aceb20df4be8271f12040d53535a597d2}{Delete\+Attendence}} (std\+::string S\+ID, std\+::string C\+ID, std\+::string Date)
+\begin{DoxyCompactList}\small\item\em deletes an entry from Attends \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_aa2c94dc186eccb69749074c39bcaca4c}{Delete\+Device}} (std\+::string C\+ID)
+\begin{DoxyCompactList}\small\item\em deletes an entry from Device \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_ad303f801ac9817c50da9113a76ccf92b}{create\+Table}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em attempts to create tables if they have not been before \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDatabaseManager_acad7ae7019d44698b0c9bcd8123d4b1a}{set\+Label}} (Q\+Label $\ast$label)
+\begin{DoxyCompactList}\small\item\em sets the output label in the gui that information will be displayed to \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} $\ast$ \mbox{\hyperlink{classDatabaseManager_a4bf189ab951f386629341dc3f6935934}{instance}} ()
+\begin{DoxyCompactList}\small\item\em along with the constructor, this class will ensure only one object of this class is ever created \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDatabaseManager_aa5fd5c977c2fe9a177406560a96cc69b}\label{classDatabaseManager_aa5fd5c977c2fe9a177406560a96cc69b}} 
+time\+\_\+t {\bfseries now}
+\item 
+\mbox{\Hypertarget{classDatabaseManager_a3ba5d06c86f095c1b240511c0d711e58}\label{classDatabaseManager_a3ba5d06c86f095c1b240511c0d711e58}} 
+tm $\ast$ {\bfseries local\+Time}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}{Database\+Manager}} ()
+\begin{DoxyCompactList}\small\item\em constructor for the class; does nothing on its own \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDatabaseManager_a697b5066882dadb39cf05be24fc18346}\label{classDatabaseManager_a697b5066882dadb39cf05be24fc18346}} 
+Q\+Label $\ast$ {\bfseries text\+Box}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDatabaseManager_a65e75e2ff122544645820b0741b34072}\label{classDatabaseManager_a65e75e2ff122544645820b0741b34072}} 
+static \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} $\ast$ {\bfseries Manager} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}\label{classDatabaseManager_aa162d97472e6c31a4e873adda435dbb6}} 
+\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\index{DatabaseManager@{DatabaseManager}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DatabaseManager()}{DatabaseManager()}}
+{\footnotesize\ttfamily Database\+Manager\+::\+Database\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+constructor for the class; does nothing on its own 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Xu Wang 250 748 901 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDatabaseManager_aaeda2a23e5fe08ef4a283de0bf5792c0}\label{classDatabaseManager_aaeda2a23e5fe08ef4a283de0bf5792c0}} 
+\index{DatabaseManager@{DatabaseManager}!AuthenticateUser@{AuthenticateUser}}
+\index{AuthenticateUser@{AuthenticateUser}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{AuthenticateUser()}{AuthenticateUser()}}
+{\footnotesize\ttfamily bool Database\+Manager\+::\+Authenticate\+User (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+Will submit a query given username and password, if it returns empty we know both are not correct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & of username and password which represent login credentials \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if both entries are true 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a57ca554d136c1e2dc8f79ff7aa41ea79}\label{classDatabaseManager_a57ca554d136c1e2dc8f79ff7aa41ea79}} 
+\index{DatabaseManager@{DatabaseManager}!CheckCourses@{CheckCourses}}
+\index{CheckCourses@{CheckCourses}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{CheckCourses()}{CheckCourses()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Database\+Manager\+::\+Check\+Courses (\begin{DoxyParamCaption}\item[{std\+::string}]{username,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+
+
+checks which courses are okay for a logged in user to access. Also updates and refreshes which courses the professor can access 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & and passwords which represent logins \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+QL 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_ad303f801ac9817c50da9113a76ccf92b}\label{classDatabaseManager_ad303f801ac9817c50da9113a76ccf92b}} 
+\index{DatabaseManager@{DatabaseManager}!createTable@{createTable}}
+\index{createTable@{createTable}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{createTable()}{createTable()}}
+{\footnotesize\ttfamily void Database\+Manager\+::create\+Table (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+attempts to create tables if they have not been before 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & is the name of the table \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_aceb20df4be8271f12040d53535a597d2}\label{classDatabaseManager_aceb20df4be8271f12040d53535a597d2}} 
+\index{DatabaseManager@{DatabaseManager}!DeleteAttendence@{DeleteAttendence}}
+\index{DeleteAttendence@{DeleteAttendence}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DeleteAttendence()}{DeleteAttendence()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Delete\+Attendence (\begin{DoxyParamCaption}\item[{std\+::string}]{S\+ID,  }\item[{std\+::string}]{C\+ID,  }\item[{std\+::string}]{Date }\end{DoxyParamCaption})}
+
+
+
+deletes an entry from Attends 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+ID} & is student ID and D\+ID is device ID and Date is the specified date \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_aa2c94dc186eccb69749074c39bcaca4c}\label{classDatabaseManager_aa2c94dc186eccb69749074c39bcaca4c}} 
+\index{DatabaseManager@{DatabaseManager}!DeleteDevice@{DeleteDevice}}
+\index{DeleteDevice@{DeleteDevice}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{DeleteDevice()}{DeleteDevice()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Delete\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{D\+ID }\end{DoxyParamCaption})}
+
+
+
+deletes an entry from Device 
+
+
+\begin{DoxyParams}{Parameters}
+{\em D\+ID} & is device ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a0fa9363b8cc6581d32af2a8541cb2e1a}\label{classDatabaseManager_a0fa9363b8cc6581d32af2a8541cb2e1a}} 
+\index{DatabaseManager@{DatabaseManager}!GetDeviceStudent@{GetDeviceStudent}}
+\index{GetDeviceStudent@{GetDeviceStudent}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{GetDeviceStudent()}{GetDeviceStudent()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Database\+Manager\+::\+Get\+Device\+Student (\begin{DoxyParamCaption}\item[{std\+::string}]{D\+ID }\end{DoxyParamCaption})}
+
+
+
+returns student number from the device table given the device id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & representation of the device ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+QL 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a4bf189ab951f386629341dc3f6935934}\label{classDatabaseManager_a4bf189ab951f386629341dc3f6935934}} 
+\index{DatabaseManager@{DatabaseManager}!instance@{instance}}
+\index{instance@{instance}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classDatabaseManager}{Database\+Manager}} $\ast$ Database\+Manager\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+along with the constructor, this class will ensure only one object of this class is ever created 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & parameters \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+instance of the class if none has been created 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Xu Wang 250 748 901 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a0043cceb53dbbcf25b70e3e0a6ec078e}\label{classDatabaseManager_a0043cceb53dbbcf25b70e3e0a6ec078e}} 
+\index{DatabaseManager@{DatabaseManager}!markAbsent@{markAbsent}}
+\index{markAbsent@{markAbsent}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{markAbsent()}{markAbsent()}}
+{\footnotesize\ttfamily void Database\+Manager\+::mark\+Absent (\begin{DoxyParamCaption}\item[{std\+::string}]{Course\+ID,  }\item[{std\+::string}]{student\+ID,  }\item[{std\+::string}]{date }\end{DoxyParamCaption})}
+
+
+
+updates Attends table and sets the student as absent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Course\+ID,student\+ID} & and date will identify which entry to change to absent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a28826083bb6fbf66f324113d8c5d76b8}\label{classDatabaseManager_a28826083bb6fbf66f324113d8c5d76b8}} 
+\index{DatabaseManager@{DatabaseManager}!markLate@{markLate}}
+\index{markLate@{markLate}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{markLate()}{markLate()}}
+{\footnotesize\ttfamily void Database\+Manager\+::mark\+Late (\begin{DoxyParamCaption}\item[{std\+::string}]{Course\+ID,  }\item[{std\+::string}]{student\+ID,  }\item[{std\+::string}]{date }\end{DoxyParamCaption})}
+
+
+
+updates Attends table and sets the student as late 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Course\+ID,student\+ID} & and date will identify which entry to change to late \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a14d2ef3fdc53221bb866e85f15f9600d}\label{classDatabaseManager_a14d2ef3fdc53221bb866e85f15f9600d}} 
+\index{DatabaseManager@{DatabaseManager}!markPresent@{markPresent}}
+\index{markPresent@{markPresent}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{markPresent()}{markPresent()}}
+{\footnotesize\ttfamily void Database\+Manager\+::mark\+Present (\begin{DoxyParamCaption}\item[{std\+::string}]{Course\+ID,  }\item[{std\+::string}]{student\+ID,  }\item[{std\+::string}]{date }\end{DoxyParamCaption})}
+
+
+
+updates Attends table and sets the student as present 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Course\+ID,student\+ID} & and date will identify which entry to change to present \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a624d87be3685e1b5c87c9ccdb0ed5877}\label{classDatabaseManager_a624d87be3685e1b5c87c9ccdb0ed5877}} 
+\index{DatabaseManager@{DatabaseManager}!ModifyDeviceStudentNum@{ModifyDeviceStudentNum}}
+\index{ModifyDeviceStudentNum@{ModifyDeviceStudentNum}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ModifyDeviceStudentNum()}{ModifyDeviceStudentNum()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Modify\+Device\+Student\+Num (\begin{DoxyParamCaption}\item[{std\+::string}]{S\+ID,  }\item[{std\+::string}]{D\+ID }\end{DoxyParamCaption})}
+
+
+
+updates student number in Device table given the device ID 
+
+
+\begin{DoxyParams}{Parameters}
+{\em S\+ID} & is student ID and D\+ID is device ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a8430cd77b4ec0c65e4698877d3946481}\label{classDatabaseManager_a8430cd77b4ec0c65e4698877d3946481}} 
+\index{DatabaseManager@{DatabaseManager}!ReadAllDevice@{ReadAllDevice}}
+\index{ReadAllDevice@{ReadAllDevice}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ReadAllDevice()}{ReadAllDevice()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Database\+Manager\+::\+Read\+All\+Device (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Displays all data from Device table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+QL 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_ad9350afa65bfab0f5c58680cadd3330c}\label{classDatabaseManager_ad9350afa65bfab0f5c58680cadd3330c}} 
+\index{DatabaseManager@{DatabaseManager}!ReadAllStudents@{ReadAllStudents}}
+\index{ReadAllStudents@{ReadAllStudents}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ReadAllStudents()}{ReadAllStudents()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Database\+Manager\+::\+Read\+All\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+selects all data from Attends table which represents student data 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a vector that holds vectors; this represents the collections of attendence data for particular attendence entries 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Xu Wang 250 748 901 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a16e5aa45800543342c54a111512fd040}\label{classDatabaseManager_a16e5aa45800543342c54a111512fd040}} 
+\index{DatabaseManager@{DatabaseManager}!ReadSomeStudents@{ReadSomeStudents}}
+\index{ReadSomeStudents@{ReadSomeStudents}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ReadSomeStudents()}{ReadSomeStudents()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Database\+Manager\+::\+Read\+Some\+Students (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::string $>$}]{input,  }\item[{std\+::string}]{Table }\end{DoxyParamCaption})}
+
+
+
+selects data from some students given their student ID\textquotesingle{}s in a vector 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stu\+ID} & is a vector of string containing student Id\textquotesingle{}s which are fed into the for loop which completes a seperate \mbox{\hyperlink{classSQLQuery}{S\+Q\+L\+Query}} call \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a container which is a vector of vector which contains the data for the relevant students 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Xu Wang 250 748 901 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_acc71bddab14d5a9089f1b364cdd2b2d5}\label{classDatabaseManager_acc71bddab14d5a9089f1b364cdd2b2d5}} 
+\index{DatabaseManager@{DatabaseManager}!ReadStudentCondition@{ReadStudentCondition}}
+\index{ReadStudentCondition@{ReadStudentCondition}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ReadStudentCondition()}{ReadStudentCondition()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Database\+Manager\+::\+Read\+Student\+Condition (\begin{DoxyParamCaption}\item[{std\+::string}]{input,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+selects data from some students given Course\+ID or Time condition 
+
+
+\begin{DoxyParams}{Parameters}
+{\em C\+ID} & is course\+ID, time is entered time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+returns a container which is a vector of vector which contains the data for the relevant students 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Tsung-\/\+Ying Tsai 251 262 078 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a4e72ffdf8c6e1a5d5ad207157e5d4a19}\label{classDatabaseManager_a4e72ffdf8c6e1a5d5ad207157e5d4a19}} 
+\index{DatabaseManager@{DatabaseManager}!ScannerNoTime@{ScannerNoTime}}
+\index{ScannerNoTime@{ScannerNoTime}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ScannerNoTime()}{ScannerNoTime()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Scanner\+No\+Time (\begin{DoxyParamCaption}\item[{std\+::string}]{C\+ID }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classScanner}{Scanner}} method without a user input time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a07360be04c8e1ced77c36af9b209712a}\label{classDatabaseManager_a07360be04c8e1ced77c36af9b209712a}} 
+\index{DatabaseManager@{DatabaseManager}!ScannerTimed@{ScannerTimed}}
+\index{ScannerTimed@{ScannerTimed}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{ScannerTimed()}{ScannerTimed()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Scanner\+Timed (\begin{DoxyParamCaption}\item[{std\+::string}]{C\+ID,  }\item[{time\+\_\+t}]{time\+Till\+Start,  }\item[{time\+\_\+t}]{time\+Till\+Late }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classScanner}{Scanner}} method with a user input time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course} & ID, set time for start time and what time a student is considered late \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Artur Krupa 251190423 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_acad7ae7019d44698b0c9bcd8123d4b1a}\label{classDatabaseManager_acad7ae7019d44698b0c9bcd8123d4b1a}} 
+\index{DatabaseManager@{DatabaseManager}!setLabel@{setLabel}}
+\index{setLabel@{setLabel}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{setLabel()}{setLabel()}}
+{\footnotesize\ttfamily void Database\+Manager\+::set\+Label (\begin{DoxyParamCaption}\item[{Q\+Label $\ast$}]{label }\end{DoxyParamCaption})}
+
+
+
+sets the output label in the gui that information will be displayed to 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & label pointer that points at the display box in the gui \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Artur Krupa 251190423 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_af01733f6b17a972225af88ba9af507c6}\label{classDatabaseManager_af01733f6b17a972225af88ba9af507c6}} 
+\index{DatabaseManager@{DatabaseManager}!WhoTakesWhat@{WhoTakesWhat}}
+\index{WhoTakesWhat@{WhoTakesWhat}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WhoTakesWhat()}{WhoTakesWhat()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ string $>$ $>$ Database\+Manager\+::\+Who\+Takes\+What (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+returns Takes table which represents which student takes what class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+S\+QL 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a8ef3dd1d94edf3d1ba06fda5244f7b58}\label{classDatabaseManager_a8ef3dd1d94edf3d1ba06fda5244f7b58}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToAttendence@{WriteToAttendence}}
+\index{WriteToAttendence@{WriteToAttendence}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToAttendence()}{WriteToAttendence()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Attendence (\begin{DoxyParamCaption}\item[{std\+::string}]{course\+Id,  }\item[{std\+::string}]{student\+Number,  }\item[{std\+::string}]{date,  }\item[{std\+::string}]{presence }\end{DoxyParamCaption})}
+
+
+
+writes into the Attends table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em course\+ID} & which identifies the course, student number which identifies the student and date and presence which determines a students state and which day \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a78cdb75d0086ca3ce764f5e471029680}\label{classDatabaseManager_a78cdb75d0086ca3ce764f5e471029680}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToCourse@{WriteToCourse}}
+\index{WriteToCourse@{WriteToCourse}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToCourse()}{WriteToCourse()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Course (\begin{DoxyParamCaption}\item[{std\+::string}]{C\+ID,  }\item[{std\+::string}]{C\+Name,  }\item[{std\+::string}]{P\+ID }\end{DoxyParamCaption})}
+
+
+
+writes into the Course table which contains what course, name and who teaches it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em C\+ID} & is the course ID, Cname is the common name of the course and P\+ID is the professor ID who teaches it \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a4e2fa702f462e8a5f1c509915830e85e}\label{classDatabaseManager_a4e2fa702f462e8a5f1c509915830e85e}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToDevice@{WriteToDevice}}
+\index{WriteToDevice@{WriteToDevice}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToDevice()}{WriteToDevice()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Device (\begin{DoxyParamCaption}\item[{std\+::string}]{Device,  }\item[{std\+::string}]{ID }\end{DoxyParamCaption})}
+
+
+
+writes into the Device table which is a table containing all registered devices along with their owners 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Device} & identification and ID which is the owner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a9559015be1223de4d1f0bf99771dcf31}\label{classDatabaseManager_a9559015be1223de4d1f0bf99771dcf31}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToProfessor@{WriteToProfessor}}
+\index{WriteToProfessor@{WriteToProfessor}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToProfessor()}{WriteToProfessor()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Professor (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{Username,  }\item[{std\+::string}]{Password }\end{DoxyParamCaption})}
+
+
+
+writes into the Professor table which functions as the login table 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & which is the professor ID and username and password which are the logins \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_a0a4c6c0b248993765a73f0a09f46cf56}\label{classDatabaseManager_a0a4c6c0b248993765a73f0a09f46cf56}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToStudent@{WriteToStudent}}
+\index{WriteToStudent@{WriteToStudent}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToStudent()}{WriteToStudent()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Student (\begin{DoxyParamCaption}\item[{std\+::string}]{ID,  }\item[{std\+::string}]{F\+Name,  }\item[{std\+::string}]{L\+Name }\end{DoxyParamCaption})}
+
+
+
+writes into the Student table which identifies each student ID with first and last name 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ID} & is the identification, F\+Name and L\+Name are first and last name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+\mbox{\Hypertarget{classDatabaseManager_ad725285de1c00cd66e60ad46e0e869e9}\label{classDatabaseManager_ad725285de1c00cd66e60ad46e0e869e9}} 
+\index{DatabaseManager@{DatabaseManager}!WriteToTakes@{WriteToTakes}}
+\index{WriteToTakes@{WriteToTakes}!DatabaseManager@{DatabaseManager}}
+\doxysubsubsection{\texorpdfstring{WriteToTakes()}{WriteToTakes()}}
+{\footnotesize\ttfamily void Database\+Manager\+::\+Write\+To\+Takes (\begin{DoxyParamCaption}\item[{std\+::string}]{C\+ID,  }\item[{std\+::string}]{S\+ID }\end{DoxyParamCaption})}
+
+
+
+writes into the Takes table which contains the membership of all students and classes they take 
+
+
+\begin{DoxyParams}{Parameters}
+{\em C\+ID} & is the course ID and S\+ID is student ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Henry Chen 251 166 178 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Database\+Manager.\+h\item 
+Database\+Manager.\+cpp\end{DoxyCompactItemize}

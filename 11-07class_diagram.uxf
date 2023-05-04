@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.0.0">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>546</x>
+      <y>259</y>
+      <w>322</w>
+      <h>357</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;STATIC&gt;&gt; GUI Class
+--
+Attributes
+-ui:FunctionMain pointer
+-user:QString
+-pass:QString
+--
+Methods
+-on_Display_clicked():void
+-on_Display_clicked():void
+-on_Display_4_clicked():void
+-on_Display_3_clicked():void
+-on_pushButton_2_clicked():void
+-on_pushButton_4_clicked():void
+-on_pushButton_3_clicked():void
+-on_pushButton_5_clicked():void
+-on_pushButton_6_clicked():void
+-on_pushButton_8_clicked():void
+-on_pushButton_7_clicked():void
+
++FunctionMain(QWidget, QString , QString )
++~FunctionMain();
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>126</y>
+      <w>287</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Login Class
+--
+Attributes
+-loginPointer: Login pointer
+--
+Methods
+#Login()
+_+instance():Login pointer_
++AuthenticateUser(string username, string password): boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>231</y>
+      <w>238</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>BluetoothScanner Class
+--
+Attributes
+-scanner: BluetoothScanner Pointer
+--
+Methods
+-BluetoothScanner()
++CheckStatus(): boolean
++BluetoothScan(): String
++getBluetoothScanner(): BluetoothScannerPointer
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>910</x>
+      <y>406</y>
+      <w>224</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>Scanner Class
+--
+Attributes
+-bluetoothScanner:BluetoothScanner pointer
+-scanner: Scanner pointer
+--
+Methods
+-Scanner()
++Scan(): vector&lt;string&gt;
+_+getScanner(): Scanner pointer_
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1148</x>
+      <y>441</y>
+      <w>273</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>SQLQuery Class
+--
+Attributes
+-Database: Sqlite3 pointer
+-Query: SQLQuery pointer
+-DatabaseName: string
+--
+Methods
+#SQLQuery()
++Exec(string sqlCommand):void
++ReadMany(string sqlCommand):vector&lt;vector&lt;string&gt;&gt;
++ReadOne(string sqlCommand):vector&lt;string&gt;
++createTable(string sqlCommand):void
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>427</x>
+      <y>693</y>
+      <w>322</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>DeviceRegister Class
+--
+Attributes
+-Register:DeviceRegister pointer
+--
+Methods
+#DeviceRegister()
+_+instance(): DeviceRegister pointer_
++StoreDeviceRegistration(String DeviceId, String StudentID): void
++ModifyDevice(string StudentID, string DeviceID):void
++DeleteDevice(string DeviceID):void
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>77</x>
+      <y>168</y>
+      <w>406</w>
+      <h>133</h>
+    </coordinates>
+    <panel_attributes>Analyzer Class
+--
+Attributes
+-AnalyzerPointer: Analyzer Pointer
+-DatabasePointer: DatabaseManager Pointer
+--
+Methods
+-Analyzer()
++AttendencePercentage(String Start, String End): vector &lt;Double&gt; 
++AttendencePercentage(String Start, String End, String Person): Double  
++AttendencePercentage(String Start, String End, vector&lt;string&gt; Persons): vector &lt;Double&gt; 
++GetAnalyzer(): AnalyzerPointer 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>217</y>
+      <w>133</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>742</x>
+      <y>714</y>
+      <w>189</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>602</x>
+      <y>609</y>
+      <w>35</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;120.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>294</y>
+      <w>63</w>
+      <h>224</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1
+</panel_attributes>
+    <additional_attributes>70.0;300.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>987</x>
+      <y>553</y>
+      <w>35</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>30.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1148</x>
+      <y>574</y>
+      <w>63</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;70.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>273</y>
+      <w>84</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>140</x>
+      <y>294</y>
+      <w>791</w>
+      <h>539</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;740.0;1110.0;740.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>987</x>
+      <y>336</y>
+      <w>28</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>861</x>
+      <y>329</y>
+      <w>70</w>
+      <h>336</h>
+    </coordinates>
+    <panel_attributes>m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;460.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>917</x>
+      <y>623</y>
+      <w>427</w>
+      <h>378</h>
+    </coordinates>
+    <panel_attributes>DatabaseManager Class
+--
+Attributes
+-Manager:DatabaseManager pointer
++now: time_t
++localTime:tm*
+--
+Methods
+#DatabaseManager()
++instance(): DatabaseManager pointer
++CreateAttendence(string Table): boolean UNNESSARCY
++WriteToAttendence(vector &lt;string&gt; Input): void
++ReadAllStudents(string Table): vector&lt;vector&lt;string&gt;&gt;
++ReadSomeStudents(vector&lt;String&gt; Input, string Table): vector&lt;vector&lt;string&gt;&gt;
++WelcomeScreen(string username, string password):vector&lt;string&gt;
++WhoTakesWhat():vector&lt;vector&lt;string&gt;&gt;
++ReadAllDevice():vector&lt;vector&lt;string&gt;&gt;
++GetDeviceStudent(string DID):vector&lt;string&gt;
++AuthenticateUser(string username, string password): bool
++ScannerNoTime(string CID): void
++ScannerTimed(string CID, time_t timeTillStart, time_t timeTillLate):void
++WriteToAttendence(string courseId, string studentNumber, string date, string presence):void
++ReadAStudent(String Input, String Table): string
++WriteToDeviceTable(String ID, String Device): void
++WriteToProfessor(string ID, string Username, string Password):void
++WriteToStudent(string ID, string FName, string LName):void
++WriteToCourse(string CID, string CName, string PID):void
++WriteToTakes(string CID, string CName):void
++getDatabaseManager(): DatabaseMangerPointer
++markAbsent(String CourseID,string studentID,string date): void
++markLate(String CourseID,string studentID,string date): void
++markPresent(String CourseID,string studentID,string date): void 
++ModifyDeviceStudentNum(string SID, string DID): void
++DeleteAttendence(string SID, string CID, string Date):void
++DeleteDevice(string CID):void
++createTable(string name):void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
