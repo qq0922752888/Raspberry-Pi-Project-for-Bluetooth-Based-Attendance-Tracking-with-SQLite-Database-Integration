@@ -8,14 +8,10 @@ Date : 2022-10-31
 #include <iostream>
 #include <ctime>
 #include <vector>
-#include <QLabel>
-#include "SQLQuery.h"
-#include "Scanner.h"
 class DatabaseManager
 {
 private:
     static DatabaseManager *Manager;
-    QLabel *textBox;
 
 protected:
     DatabaseManager();
@@ -23,11 +19,10 @@ protected:
 public:
     time_t now;
     tm* localTime;
-    ~DatabaseManager();
 	static DatabaseManager *instance();
     std::vector<std::vector<std::string>> ReadAllStudents();
     std::vector<std::vector<std::string>> ReadSomeStudents(std::vector<std::string> input, std::string Table);
-    std::vector<std::string> CheckCourses(std::string username, std::string password);
+    std::vector<std::string> WelcomeScreen(std::string username, std::string password);
     std::vector<std::vector<std::string>> WhoTakesWhat();
     std::vector<std::vector<std::string>> ReadAllDevice();
     std::vector<std::vector<std::string>> ReadStudentCondition(std::string input , int mode);
@@ -48,5 +43,4 @@ public:
     void DeleteAttendence(std::string SID, std::string CID, std::string Date);
     void DeleteDevice(std::string CID);
     void createTable(std::string name);
-    void setLabel(QLabel *label);
 };

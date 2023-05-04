@@ -1,30 +1,15 @@
 #include "BluetoothScanner.h"
 
-//BluetoothScanner.h - Header file for a class to scan for bluetooth devices
-
-/**
-*@brief Bluetooth Scanner class uses raspberry pi's bluetooth controller app hcitool to receive the bluetooth devices and put them into a string to be used by the scanenr class
-*@author Artur Krupa 251190423
-**/
+/*BluetoothScanner.h - Header file for a class to scan for bluetooth devices
+Created by: Artur Krupa, 251190423*/
 
 using namespace std;
 
-/**
-*@brief constructor for the BluetoothScanner class
-*@author Artur Krupa 251190423
-*@param  no parameters 
-*@return returns nothing
-**/
 BluetoothScanner::BluetoothScanner(){
 
 }
 
-/**
-*@brief Destructor to delete the pointer and object to the BluetoothScanner object
-*@author Artur Krupa 251190423
-*@param  no parameters
-*@return returns nothing
-**/
+//Delete the pointer and object to the BluetoothScanner object
 BluetoothScanner::~BluetoothScanner(){
     delete(BluetoothScanner::scanner);
 }
@@ -32,12 +17,7 @@ BluetoothScanner::~BluetoothScanner(){
 //Initialize our BluetoothScanner pointer to nothing initially
 BluetoothScanner* BluetoothScanner::scanner = 0;
 
-/**
-*@brief getter method to create a new BluetoothScanner object if it does not exist
-*@author Artur Krupa 251190423 
-*@param  no parameters
-*@return returns nothing
-**/
+
 BluetoothScanner* BluetoothScanner::getBluetoothScanner(){
     
     //If the getBluetoothScanner() method is called, check to see if the pointer points to a created BluetoothScanner object
@@ -50,12 +30,7 @@ BluetoothScanner* BluetoothScanner::getBluetoothScanner(){
     //Return the pointer to our BluetoothScanner object
     return BluetoothScanner::scanner;
 }
-/**
-*@brief function to run the scan by receiving the output from hcitool and store it in the output string variable
-*@param  no parameters
-*@return output - the string holding the output from hcitool
-*@author Artur Krupa, 251190423
-**/
+
 string BluetoothScanner::BluetoothScan(){
     
     //Create a char array buffer to store the output of the Raspberry Pi's bluetooth scan command

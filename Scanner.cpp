@@ -2,52 +2,32 @@
 
 using namespace std;
 
-/**
-*@brief A Scanner class that parses the data retrieved from BluetoothScanner
-*@author Artur Krupa, 251190423
-**/
+/*Scanner.cpp: A Scanner class that parses the data retrieved from BluetoothScanner
+Created by: Artur Krupa, 251190423*/
 
 //Initialize our Scanner pointer to not point to anything at the begining
 Scanner* Scanner::scanner = 0;
 
-/**
-*@brief Constructor to initialize our BluetoothScanner pointer to point to the BluetoothScanner singleton object when creating a Scanner object
-*@author Artur Krupa, 251190423
-*@return nothing
-*@param nothing
-**/
+//When we create a Scanner object, we initialize our BluetoothScanner pointer to point to the BluetoothScanner singleton object
 Scanner::Scanner(){
     this->bluetoothScanner = BluetoothScanner::getBluetoothScanner();
 }
 
-/**
-*@brief Destructor to delete both Scanner and BluetoothScanner as they are no longer needed anymore when we're done with Scanner
-*@author Artur Krupa, 251190423
-*@return nothing
-*@param nothing
-**/
+//when we are finished with scanner, we delete both Scanner and BluetoothScanner as they are no longer needed anymore
 Scanner::~Scanner(){
     delete(bluetoothScanner);
     delete(scanner);
 }
-/**
-*@brief If the Scanner object is not initialized, initialize it and then return the pointer to the Scanner object
-*@return scanner - The current instance of the Scanner class
-*@author Artur Krupa, 251190423
-*@param nothing
-**/
+
+//If the Scanner object is not initialized, initialize it and then return the pointer to the Scanner object
 Scanner* Scanner::getScanner(){
     if (!scanner){
         scanner = new Scanner();
     }
     return scanner;
 }
-/**
-*@brief Scan returns the bluetooth MAC addresses of the devices that we found
-*@return devices - the MAC addresses of the scanned bluetooth devices
-*@author Artur Krupa, 251190423
-*@param nothing
-**/
+
+//scan returns the bluetooth MAC addresses of the devices that we found
 vector<string> Scanner::scan(){
 
     //Get the data from BluetoothScan and store it in scannedDevices
@@ -78,3 +58,45 @@ vector<string> Scanner::scan(){
     //Return the MAC addresses of the scanned bluetooth devices
     return devices;
 }
+
+// //scan() performs a bluetooth scan at desired times and dtermines if a device is present or if it arrived late
+// vector<ScannedDevice> Scanner::scan(time_t timeTillStart, time_t timeTillLate){
+    
+//     //Wait until we reached the desired time to perform the first scan
+//     sleep(difftime(timeTillStart, time(0)));
+
+//     cout <<"Taking first attendence scan" << endl;
+    
+//     //Scan the devices currently present and store them in devices
+//     vector<ScannedDevice> devices = this->scan();
+
+//     cout << "Completed first attendence scan" << endl;
+
+//     //Wait until we reached the desired time to perform the second scan
+//     sleep(difftime(timeTillLate, time(0)));
+
+//     cout << "Taking late attendence scan" << endl;
+
+//     //Scan the devices that are now all present
+//     vector<ScannedDevice> temp = this->scan();
+
+//     bool contains;
+
+//     //Check to see if the devices in temp was not scanned into devices, if it is not, it is marked as late, and added to devices
+//     for (int i = 0; i < temp.size(); i++){
+//         contains = false;
+//         for (int j = 0; j < devices.size() && !contains; j++){
+//             if (strcmp(temp[i].getDeviceID().c_str(), devices[j].getDeviceID().c_str()) == 0){
+//                 contains = true;
+//             }
+//         }
+//         if(!contains){
+//             temp[i].setLateStatus(true);
+//             devices.push_back(temp[i]);
+//         }
+//     }
+
+//     //Return all scanned present and late devices
+//     return devices;
+
+// }

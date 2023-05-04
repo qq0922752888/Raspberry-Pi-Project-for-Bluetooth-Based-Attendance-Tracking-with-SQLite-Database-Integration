@@ -6,7 +6,6 @@ Date : 2022-11-05
 
 #include <string>
 #include <vector>
-#include "DatabaseManager.h"
 
 class DeviceRegister{
     private:

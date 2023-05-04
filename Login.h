@@ -7,14 +7,12 @@ Last Edit: 2022-11-07
 #include <string>
 #include <iostream>
 #include <string>
-#include "DatabaseManager.h"
 class Login {
 private:
     static Login* loginPointer;
 protected:
     Login();
 public:
-    ~Login();
     static Login* instance();
     bool AuthenticateUser(std::string username, std::string password);
     

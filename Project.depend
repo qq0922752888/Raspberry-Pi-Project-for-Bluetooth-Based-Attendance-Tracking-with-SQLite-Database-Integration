@@ -1,0 +1,94 @@
+# depslib dependency file v1.0
+1668527640 source:c:\users\user\desktop\cs3307\project\bluetoothscanner.cpp
+	"BluetoothScanner.h"
+
+1668527640 c:\users\user\desktop\cs3307\project\bluetoothscanner.h
+	<iostream>
+	<stdexcept>
+	<stdio.h>
+	<string>
+
+1668527640 source:c:\users\user\desktop\cs3307\project\deviceregister.cpp
+	"DeviceRegister.h"
+	"DatabaseManager.h"
+
+1668527640 c:\users\user\desktop\cs3307\project\deviceregister.h
+	<string>
+	<vector>
+
+1668974441 c:\users\user\desktop\cs3307\project\databasemanager.h
+	<string>
+	<iostream>
+	<ctime>
+	<vector>
+
+1668527640 source:c:\users\user\desktop\cs3307\project\login.cpp
+	"Login.h"
+	"DatabaseManager.h"
+
+1668527640 c:\users\user\desktop\cs3307\project\login.h
+	<string>
+	<iostream>
+	<string>
+
+1668527640 source:c:\users\user\desktop\cs3307\project\scanner.cpp
+	"Scanner.h"
+
+1668527640 c:\users\user\desktop\cs3307\project\scanner.h
+	<vector>
+	<ctime>
+	<unistd.h>
+	<string.h>
+	"BluetoothScanner.h"
+
+1669051658 source:c:\users\user\desktop\cs3307\project\ui.cpp
+	"UI.h"
+	"DatabaseManager.h"
+	"DeviceRegister.h"
+	"Login.h"
+	"Analyzer.h"
+
+1668527640 c:\users\user\desktop\cs3307\project\ui.h
+	<string>
+	<iostream>
+	<ctime>
+	<algorithm>
+
+1669013254 source:c:\users\user\desktop\cs3307\project\databasemanager.cpp
+	<string>
+	<vector>
+	<iostream>
+	"DatabaseManager.h"
+	"SQLQuery.h"
+	"Scanner.h"
+
+1669051851 c:\users\user\desktop\cs3307\project\sqlquery.h
+	<iostream>
+	"sqlite3.h"
+	<vector>
+
+1662373738 c:\users\user\desktop\cs3307\project\sqlite3.h
+	<stdarg.h>
+
+1668527640 source:c:\users\user\desktop\cs3307\project\sqlquery.cpp
+	"SQLQuery.h"
+
+1668719771 c:\users\user\desktop\cs3307\project\analyzer.cpp
+	<iostream>
+	<algorithm>
+	<cstring>
+	<vector>
+	<string>
+	"DatabaseManager.h"
+
+1669013254 source:c:\users\user\desktop\cs3307\project\analyzer.cpp
+	"Analyzer.h"
+
+1668975331 c:\users\user\desktop\cs3307\project\analyzer.h
+	<iostream>
+	<algorithm>
+	<cstring>
+	<vector>
+	<string>
+	"DatabaseManager.h"
+
